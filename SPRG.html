@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<?php require_once('auth1.php');
+include ("config.php");
+
+mysql_connect( $db_host, $user, $password )
+      or die( "Error! Could not connect to database: " . mysql_error() );
+
+mysql_select_db( $db_name )
+      or die( "Error! Could not select the database: " . mysql_error() );
+
+$user_id = $_SESSION['SESS_MEMBER_ID'];
+$query_admin = "SELECT AdminRights FROM Users WHERE id='$user_id'";
+$result_admin = mysql_query($query_admin);
+$admin = mysql_fetch_array($result_admin);
+
+if (isset($_SESSION['UserName'])){
+echo "Welcome ".$_SESSION['UserName'];
+
+
+?>
+  <title>SPRB.html</title>
+
+  
+</head><body style="color: rgb(0, 0, 0); background-color: rgb(62, 165, 161);" link="#0000ff" vlink="#800080">
+<center>
+<h4>
+<p><br>
+</p>
+</h4>
+<br>
+<table style="background-color: rgb(62, 165, 161); width: 676px; height: 739px;">
+  <tbody>
+    <tr>
+      <td>
+      <center><img src="/logo_for_atofs.jpg" height="175" width="200"></center>
+      </td>
+      <td colspan="2" style="text-align: left; vertical-align: middle; height: 184px; width: 200px; white-space: nowrap;">
+      <center>
+      <h1>
+      <p><small>Surveillance Performance <br>
+and Registration Baseline (SPRB)<br>
+Home</small> </p>
+      </h1>
+      </center>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <hr></td>
+      <td>
+      <hr></td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>
+      <h2>
+      <center>Sites:
+      <div style="border: 1px solid rgb(204, 204, 204); overflow: auto; width: 100%; height: 150px;"><a href="../../../../tsprgPortal/A11/">A11</a> <img src="images/greenfolder.png"> <br>
+      <a href="../../../../tsprgPortal/CLT/">CLT</a> <img src="images/greenfolder.png"> <br>
+      <a href="../../../../tsprgPortal/CRPZ/">CRPZ</a> <img src="images/greenfolder.png"> <br>
+      <a href="../../../../tsprgPortal/DAB/">DAB</a> <img src="images/greenfolder.png"> <br>
+      <a href="../../../../tsprgPortal/DMA/">DMA</a> <br>
+      <a href="../../../../tsprgPortal/ELP/">ELP</a> <img src="images/greenfolder.png"> <br>
+      <a href="../../../../tsprgPortal/I90/">I90</a> <img src="images/greenfolder.png"> <br>
+      <a href="../../../../tsprgPortal/JAX/">JAX</a> <img src="images/yellowfolder.png"><br>
+      <a href="../../../../tsprgPortal/MCI/">MCI</a> <img src="images/greenfolder.png"> <br>
+      <a href="../../../../tsprgPortal/MCO/">MCO</a> <img src="images/yellowfolder.png"><br>
+      <a href="../../../../tsprgPortal/MIA/">MIA</a> <br>
+      <a href="../../../../tsprgPortal/MSP/">MSP</a> <img src="images/yellowfolder.png"> <br>
+      <a href="../../../../tsprgPortal/N90/">N90</a> <br>
+      <a href="../../../../tsprgPortal/NCT/">NCT</a> <img src="images/yellowfolder.png"> <br>
+      <a href="../../../../tsprgPortal/ORD/">ORD</a> <img src="images/redfolder.png"> <br>
+      <a href="../../../../tsprgPortal/ORF/">ORF</a> <br>
+      <a href="../../../../tsprgPortal/P50/">P50</a> <br>
+      <a href="../../../../tsprgPortal/PNS/">PNS</a> <img src="images/redfolder.png"> <br>
+      <a href="../../../../tsprgPortal/S46/">S46</a> <br>
+      <a href="../../../../tsprgPortal/SATZ/">SATZ</a> <img src="images/greenfolder.png"> <br>
+      <a href="../../../../tsprgPortal/SBA/">SBA</a> <img src="images/yellowfolder.png"><br>
+      <a href="../../../../tsprgPortal/SCT/">SCT</a> <img src="images/greenfolder.png"> <br>
+      <a href="../../../../tsprgPortal/SDF/">SDF</a> <img src="images/greenfolder.png"> <br>
+      <a href="../../../../tsprgPortal/TPA/">TPA</a> <img src="images/greenfolder.png"> <br>
+      </div>
+      <br>
+      <br>
+      <br>
+      <a href="../../../../tsprgPortal/POC%20Group%20List/">Contact List</a>
+      </center>
+      </h2>
+      <center> </center>
+      </td>
+      <td colspan="2">
+      <h2>
+      <center>
+      <p><br>
+      </p>
+      </center>
+      </h2>
+      <h2 style="text-align: right;"><a href="/tsprgPortal/Action%20Items">Action Items</a></h2>
+      <h2 style="text-align: right;"><a href="/tsprgPortal/Minutes">Minutes</a></h2>
+      <h2 style="text-align: right;"><a href="/tsprgPortal/Orders">Orders</a></h2>
+      <h2 style="text-align: right;"><a href="/tsprgPortal/Presentations">Presentations</a></h2>
+      <h2 style="text-align: right;"><a href="/tsprgPortal/Schedules">Schedule</a></h2>
+      <h2 style="text-align: right;"><a href="../../../../tsprgPortal/Templates">Templates</a></h2>
+      <h2 style="text-align: right;"><a href="../../../../tsprgPortal/Library">Library</a></h2>
+      <h2 style="text-align: right;"><a href="../../../../tsprgPortal/logs">Logs</a></h2>
+
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+      <hr>
+      <h4 style="text-align: center;">Send comments to: <a href="mailto:howard.ctr.tibbs@faa.gov%3C/A%3E"><i>system
+administrator</i></a></h4>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+</body></html>
