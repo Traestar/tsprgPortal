@@ -1,5 +1,7 @@
-tsprgPortal
-===========
+## TSPRG Radar Registration Portal
 
-This is the server portal that I've worked on for my project. 
-I included some of the former files in the drop to give you a demonstration of how it was displayed.
+Live Demo:  
+https://traestar.github.io/tsprgPortal/SPRB.html
+
+This internal tool was developed to support radar registration and airport mapping coordination across U.S. airports. It organizes radar data, coordinates, and mappings for operational accuracy and reporting.
+
