@@ -1,24 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html><head>
-<?php require_once('auth1.php');
-include ("config.php");
 
-mysql_connect( $db_host, $user, $password )
-      or die( "Error! Could not connect to database: " . mysql_error() );
-
-mysql_select_db( $db_name )
-      or die( "Error! Could not select the database: " . mysql_error() );
-
-$user_id = $_SESSION['SESS_MEMBER_ID'];
-$query_admin = "SELECT AdminRights FROM Users WHERE id='$user_id'";
-$result_admin = mysql_query($query_admin);
-$admin = mysql_fetch_array($result_admin);
-
-if (isset($_SESSION['UserName'])){
-echo "Welcome ".$_SESSION['UserName'];
-
-
-?>
   <title>SPRB.html</title>
 
   
